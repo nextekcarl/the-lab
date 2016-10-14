@@ -1,0 +1,18 @@
+<%= link_to 'Reroll', '/' %>
+
+<h1><%= @superbeing.name %></h1>
+<p>
+  Origin: <strong><%= @superbeing.origin %></strong><br />
+  Stats:
+  <ul>
+    <% @superbeing.stats.each do |stat| %>
+      <li><%= stat %></li>
+    <% end %>
+  </ul>
+  Powers:
+  <ul>
+    <% @superbeing.powers.each do |power| %>
+      <li><%= power %></li>
+    <% end %>
+  </ul>
+</p>

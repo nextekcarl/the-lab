@@ -1,0 +1,2 @@
+module RandomPowersHelper
+end
