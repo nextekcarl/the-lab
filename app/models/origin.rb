@@ -60,6 +60,10 @@ class Origin
   end
 
   def random_power
-    return "#{Faker::Superhero.power}: #{power_strength}"
+    return "#{possible_immunity}#{Faker::Superhero.power}: #{power_strength}"
+  end
+
+  def possible_immunity
+    "Immunity to " if Random.new.rand(10) === 0
   end
 end
