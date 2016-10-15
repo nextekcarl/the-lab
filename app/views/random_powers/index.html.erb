@@ -15,4 +15,11 @@
       <li><%= power %></li>
     <% end %>
   </ul>
+
+  Skills:
+  <ul>
+    <% @superbeing.degrees.each do |degree| %>
+      <li><%= degree %></li>
+    <% end %>
+  </ul>
 </p>
