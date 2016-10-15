@@ -5,8 +5,8 @@
   Origin: <strong><%= @superbeing.origin %></strong><br />
   Stats:
   <ul>
-    <% @superbeing.stats.each do |stat| %>
-      <li><%= stat %></li>
+    <% @superbeing.stats.each do |stat, val| %>
+      <li><%= "#{stat.to_s.titleize}: #{val}" %></li>
     <% end %>
   </ul>
   Powers:
