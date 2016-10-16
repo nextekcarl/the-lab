@@ -1,4 +1,13 @@
 class Alien < Origin
+
+  def to_s
+    "Alien from #{home}"
+  end
+
+  def home
+    [Faker::Space.star, Faker::Space.star_cluster, Faker::Space.constellation, Faker::Space.galaxy, Faker::Space.nebula].shuffle.first
+  end
+
   def strength
     roll('1d24')
   end
