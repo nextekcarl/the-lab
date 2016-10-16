@@ -23,10 +23,12 @@
     <% end %>
   </ul>
 
-  Weaknesses:
-  <ul>
-    <% @superbeing.weaknesses.each do |weakness| %>
-      <li>Weak vs: <%= weakness %></li>
-    <% end %>
-  </ul>
+  <% unless @superbeing.weaknesses.empty?  %>
+    Weaknesses:
+    <ul>
+      <% @superbeing.weaknesses.each do |weakness| %>
+        <li>Weak vs: <%= weakness %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </p>
