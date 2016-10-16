@@ -1,4 +1,11 @@
 class Experiment < Origin
+  def to_s
+    "Experiment, #{origin_details}"
+  end
+
+  def origin_details
+    ['of the military', 'in genetics', 'magicial nature', 'of Aliens'].shuffle.first
+  end
   def strength
     roll('2d10')
   end

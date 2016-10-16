@@ -1,4 +1,13 @@
 class Accident < Origin
+
+  def to_s
+    "Accident, #{origin_details}"
+  end
+
+  def origin_details
+    ['military', 'irreproducible', 'magicial in origin'].shuffle.first
+  end
+
   def strength
     roll('2d10')
   end
