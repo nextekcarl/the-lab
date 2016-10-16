@@ -35,4 +35,8 @@ class Robot < Origin
     1
   end
 
+  def weakness_chance
+    5
+  end
+
 end

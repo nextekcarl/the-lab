@@ -1,11 +1,12 @@
 class Superbeing < ApplicationRecord
-  attr_accessor :powers, :stats, :real_origin, :degrees
+  attr_accessor :powers, :stats, :real_origin, :degrees, :weaknesses
 
   after_initialize do
     self.origin = set_origin if origin.blank?
     set_powers
     set_stats
     set_degrees
+    set_weaknesses
     self.name = Faker::Superhero.name
   end
 
@@ -21,6 +22,10 @@ class Superbeing < ApplicationRecord
 
   def set_stats
     @stats ||= self.real_origin.roll_stats
+  end
+
+  def set_weaknesses
+    @weaknesses ||= self.real_origin.set_weaknesses
   end
 
   def set_degrees

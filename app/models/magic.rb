@@ -35,4 +35,8 @@ class Magic < Origin
     2
   end
 
+  def weakness_chance
+    15
+  end
+
 end

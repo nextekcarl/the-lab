@@ -51,6 +51,10 @@ class Origin
     0
   end
 
+  def weakness_chance
+    0
+  end
+
   def set_powers
     powers = []
     (Random.new.rand(base_powers)+add_powers).times do
@@ -65,5 +69,13 @@ class Origin
 
   def possible_immunity
     "Immunity to " if Random.new.rand(10) === 0
+  end
+
+  def set_weaknesses
+    weaknesses = []
+    while weakness_chance >= Random.new.rand(100) do
+      weaknesses << Faker::Superhero.power
+    end
+    return weaknesses
   end
 end

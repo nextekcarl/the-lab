@@ -35,4 +35,8 @@ class Alien < Origin
     2
   end
 
+  def weakness_chance
+    30
+  end
+
 end

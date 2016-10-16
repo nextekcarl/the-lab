@@ -35,4 +35,8 @@ class Curse < Origin
     1
   end
 
+  def weakness_chance
+    20
+  end
+
 end

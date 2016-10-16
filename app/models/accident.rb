@@ -35,4 +35,8 @@ class Accident < Origin
     1
   end
 
+  def weakness_chance
+    10
+  end
+
 end

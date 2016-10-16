@@ -22,4 +22,11 @@
       <li><%= degree %></li>
     <% end %>
   </ul>
+
+  Weaknesses:
+  <ul>
+    <% @superbeing.weaknesses.each do |weakness| %>
+      <li>Weak vs: <%= weakness %></li>
+    <% end %>
+  </ul>
 </p>
