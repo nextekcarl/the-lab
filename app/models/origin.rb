@@ -6,41 +6,42 @@ class Origin
   end
 
   def strength
-    roll('3d6')
+    roll('30d6')
   end
 
   def intelligence
-    roll('3d6')
+    roll('30d6')
   end
 
   def agility
-    roll('3d6')
+    roll('30d6')
   end
 
   def willpower
-    roll('3d6')
+    roll('30d6')
   end
 
   def charisma
-    roll('3d6')
+    roll('30d6')
   end
 
   def endurance
-    roll('3d6')
+    roll('30d6')
   end
 
   def roll_stats
-    {strength: strength,
-      intelligence: intelligence,
-      agility: agility,
-      willpower: willpower,
-      charisma: charisma,
-      endurance: endurance
+    {
+      Strength: strength,
+      IQ: intelligence,
+      Agility: agility,
+      Willpower: willpower,
+      Charisma: charisma,
+      Endurance: endurance
     }
   end
 
   def power_strength
-    roll('3d6')
+    roll('30d6')
   end
 
   def base_powers

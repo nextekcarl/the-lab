@@ -1,30 +1,30 @@
 class Robot < Origin
   def strength
-    roll('6d4')
+    roll('60d4')
   end
 
   def intelligence
-    roll('3d6')
+    roll('30d6')
   end
 
   def agility
-    roll('2d10')
+    roll('20d10')
   end
 
   def willpower
-    roll('1d10')
+    roll('10d10')
   end
 
   def charisma
-    roll('1d8')
+    roll('10d8')
   end
 
   def endurance
-    roll('5d6')
+    roll('50d6')
   end
 
   def power_strength
-    roll('2d6')+5
+    roll('20d6')+50
   end
 
   def base_powers

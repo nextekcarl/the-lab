@@ -1,30 +1,30 @@
 class Curse < Origin
   def strength
-    roll('3d6')
+    roll('30d6')
   end
 
   def intelligence
-    roll('3d6')
+    roll('30d6')
   end
 
   def agility
-    roll('1d20')
+    roll('10d20')
   end
 
   def willpower
-    roll('4d6')
+    roll('40d6')
   end
 
   def charisma
-    roll('2d10')
+    roll('20d10')
   end
 
   def endurance
-    roll('2d6')+6
+    roll('20d6')+60
   end
 
   def power_strength
-    roll('4d6')
+    roll('40d6', true)
   end
 
   def base_powers

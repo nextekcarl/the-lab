@@ -9,31 +9,31 @@ class Accident < Origin
   end
 
   def strength
-    roll('2d10')
+    roll('20d10')
   end
 
   def intelligence
-    roll('3d6')
+    roll('30d6')
   end
 
   def agility
-    roll('2d10')
+    roll('20d10')
   end
 
   def willpower
-    roll('2d6')+6
+    roll('20d6')+60
   end
 
   def charisma
-    roll('3d6')
+    roll('30d6')
   end
 
   def endurance
-    roll('2d6')+6
+    roll('20d6')+60
   end
 
   def power_strength
-    roll('2d10')
+    roll('20d10')
   end
 
   def base_powers

@@ -31,7 +31,7 @@ class Superbeing < ApplicationRecord
   def set_degrees
     return @degrees unless @degrees.blank?
     @degrees = []
-    (@stats[:intelligence]/7).times do
+    (@stats[:IQ]/70).times do
       @degrees << Faker::Educator.course
     end
     @degrees = ["No advanced degrees of note"] if @degrees.empty?

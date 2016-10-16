@@ -9,31 +9,31 @@ class Alien < Origin
   end
 
   def strength
-    roll('1d24')
+    roll('10d24')
   end
 
   def intelligence
-    roll('1d24')
+    roll('10d24', true)
   end
 
   def agility
-    roll('1d24')
+    roll('10d24')
   end
 
   def willpower
-    roll('1d24')
+    roll('10d24')
   end
 
   def charisma
-    roll('1d24')
+    roll('10d24')
   end
 
   def endurance
-    roll('1d24')
+    roll('10d24')
   end
 
   def power_strength
-    roll('2d10')
+    roll('20d10', true)
   end
 
   def base_powers
