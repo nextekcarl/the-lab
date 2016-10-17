@@ -31,6 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'faker'
+gem 'bootstrap', '~> 4.0.0.alpha4'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +54,11 @@ end
 # Rails 12factor for Heroku: https://github.com/heroku/rails_12factor
 group :production do
   gem 'rails_12factor'
+end
+
+# Unicorn: http://unicorn.bogomips.org
+group :production do
+  gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
