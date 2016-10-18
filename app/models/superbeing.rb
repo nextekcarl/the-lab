@@ -31,8 +31,16 @@ class Superbeing < ApplicationRecord
   def set_degrees
     return @degrees unless @degrees.blank?
     @degrees = []
-    (((@stats[:IQ]-70)/20)).times do
-      @degrees << Faker::Educator.course
+    number_of_degrees = 0
+    max_number = (@stats[:IQ]-70)/20
+    while max_number > number_of_degrees do
+      new_degree = Faker::Educator.course
+      if @degrees.include? new_degree
+        next #no exact duplicate degrees
+      else
+        @degrees << new_degree
+        number_of_degrees += 1
+      end
     end
     @degrees = ["No advanced degrees of note"] if @degrees.empty?
   end

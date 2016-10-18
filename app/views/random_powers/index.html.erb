@@ -21,7 +21,7 @@
 
   <strong>Skills:</strong>
   <ul>
-    <% @superbeing.degrees.each do |degree| %>
+    <% @superbeing.degrees.sort.each do |degree| %>
       <li><%= degree %></li>
     <% end %>
   </ul>
