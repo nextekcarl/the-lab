@@ -5,7 +5,7 @@ class Accident < Origin
   end
 
   def origin_details
-    ['military', 'irreproducible', 'magicial in origin'].shuffle.first
+    ['military', 'irreproducible', 'magic in origin'].shuffle.first
   end
 
   def strength

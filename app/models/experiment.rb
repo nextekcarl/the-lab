@@ -4,7 +4,7 @@ class Experiment < Origin
   end
 
   def origin_details
-    ['of the military', 'in genetics', 'magicial nature', 'of Aliens'].shuffle.first
+    ['of the military', 'in genetics', 'magic in nature', 'of Aliens'].shuffle.first
   end
   def strength
     roll('20d10')
