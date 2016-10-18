@@ -13,7 +13,7 @@ class Superbeing < ApplicationRecord
   private
 
   def set_origin
-    @real_origin = [Mutant.new, Curse.new, Accident.new, Experiment.new, Robot.new, Magic.new, Alien.new].shuffle.first
+    @real_origin = [Mutant.new, Curse.new, Accident.new, Experiment.new, Robot.new, Magic.new, Alien.new, Skilled.new].shuffle.first
   end
 
   def set_powers
@@ -29,19 +29,6 @@ class Superbeing < ApplicationRecord
   end
 
   def set_degrees
-    return @degrees unless @degrees.blank?
-    @degrees = []
-    number_of_degrees = 0
-    max_number = (@stats[:IQ]-70)/20
-    while max_number > number_of_degrees do
-      new_degree = Faker::Educator.course
-      if @degrees.include? new_degree
-        next #no exact duplicate degrees
-      else
-        @degrees << new_degree
-        number_of_degrees += 1
-      end
-    end
-    @degrees = ["No advanced degrees of note"] if @degrees.empty?
+    @degrees ||= self.real_origin.set_degrees(@stats[:IQ])
   end
 end

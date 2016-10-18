@@ -1,5 +1,5 @@
 class Origin
-  attr_accessor :stats
+  attr_accessor :stats, :degrees
 
   def to_s
     self.class.to_s.titleize
@@ -87,5 +87,27 @@ class Origin
       weaknesses << Faker::Superhero.power
     end
     return weaknesses
+  end
+
+  def degree_calculation(intelligence)
+    (intelligence-70)/20
+  end
+
+  def set_degrees(intelligence)
+    return @degrees unless @degrees.blank?
+    @degrees = []
+    number_of_degrees = 0
+    max_number = degree_calculation(intelligence)
+    while max_number > number_of_degrees do
+      new_degree = Faker::Educator.course
+      if @degrees.include? new_degree
+        next #no exact duplicate degrees
+      else
+        @degrees << new_degree
+        number_of_degrees += 1
+      end
+    end
+    @degrees = ["No advanced degrees of note"] if @degrees.empty?
+    return @degrees
   end
 end

@@ -12,12 +12,14 @@
     <% end %>
   </ul>
 
-  <strong>Powers:</strong>
-  <ul>
-    <% @superbeing.powers.each do |power| %>
-      <li><%= power.to_s %></li>
-    <% end %>
-  </ul>
+  <% unless @superbeing.powers.empty?  %>
+    <strong>Powers:</strong>
+    <ul>
+      <% @superbeing.powers.each do |power| %>
+        <li><%= power.to_s %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <strong>Skills:</strong>
   <ul>
