@@ -58,14 +58,23 @@ class Origin
 
   def set_powers
     powers = []
-    (Random.new.rand(base_powers)+add_powers).times do
-      powers << random_power
+    number_of_powers = Random.new.rand(base_powers)+add_powers
+    power_count = 0
+    while power_count < number_of_powers do
+      power = random_power
+      if powers.include? power
+        next #No duplicate powers
+      else
+        powers << power
+        power_count += 1
+      end
     end
     return powers
   end
 
   def random_power
-    return "#{possible_immunity}#{Faker::Superhero.power}: #{power_strength}"
+    return Power.new({name: "#{possible_immunity}#{Faker::Superhero.power}",
+                     strength: "#{power_strength}"})
   end
 
   def possible_immunity

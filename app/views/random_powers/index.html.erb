@@ -2,21 +2,24 @@
 
 <h1><%= @superbeing.name %></h1>
 <p>
-  Origin: <strong><%= @superbeing.origin %></strong><br />
-  Stats:
+  <strong>Origin:</strong> <%= @superbeing.origin %>
+</p>
+<div>
+  <strong>Stats:</strong>
   <ul>
     <% @superbeing.stats.each do |stat, val| %>
       <li><%= "#{stat.to_s}: #{val}" %></li>
     <% end %>
   </ul>
-  Powers:
+
+  <strong>Powers:</strong>
   <ul>
     <% @superbeing.powers.each do |power| %>
-      <li><%= power %></li>
+      <li><%= power.to_s %></li>
     <% end %>
   </ul>
 
-  Skills:
+  <strong>Skills:</strong>
   <ul>
     <% @superbeing.degrees.each do |degree| %>
       <li><%= degree %></li>
@@ -24,11 +27,11 @@
   </ul>
 
   <% unless @superbeing.weaknesses.empty?  %>
-    Weaknesses:
+    <strong>Weaknesses:</strong>
     <ul>
       <% @superbeing.weaknesses.each do |weakness| %>
         <li>Weak vs: <%= weakness %></li>
       <% end %>
     </ul>
   <% end %>
-</p>
+</div>
