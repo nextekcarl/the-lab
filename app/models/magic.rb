@@ -19,7 +19,7 @@ class Magic < Origin
     roll('30d8')
   end
 
-  def endurance
+  def health
     roll('30d6')
   end
 

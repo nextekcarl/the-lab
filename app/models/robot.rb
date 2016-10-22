@@ -19,7 +19,7 @@ class Robot < Origin
     roll('10d8')
   end
 
-  def endurance
+  def health
     roll('50d6')
   end
 

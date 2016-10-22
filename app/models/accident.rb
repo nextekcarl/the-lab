@@ -28,7 +28,7 @@ class Accident < Origin
     roll('30d6')
   end
 
-  def endurance
+  def health
     roll('20d6')+60
   end
 

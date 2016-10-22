@@ -19,7 +19,7 @@ class Curse < Origin
     roll('20d10')
   end
 
-  def endurance
+  def health
     roll('20d6')+60
   end
 

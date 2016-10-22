@@ -29,7 +29,7 @@ class Mutant < Origin
     roll('20d8', @omega)
   end
 
-  def endurance
+  def health
     roll('30d6', @omega)
   end
 

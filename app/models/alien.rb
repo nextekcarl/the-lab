@@ -28,7 +28,7 @@ class Alien < Origin
     roll('10d24')
   end
 
-  def endurance
+  def health
     roll('10d24')
   end
 

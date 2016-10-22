@@ -13,7 +13,10 @@ class Superbeing < ApplicationRecord
   end
 
   before_create do
-    self.description = @powers.map(&:to_s).join("\n")
+    @stats.each do |stat, val|
+      self.description = "#{stat.to_s}: #{val}\n"
+    end
+    self.description += @powers.map(&:to_s).join("\n")
     self.weaknesses.each do |weakness|
       self.description += "Weak vs: #{weakness}\n"
     end

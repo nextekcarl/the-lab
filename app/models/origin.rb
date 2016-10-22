@@ -25,7 +25,7 @@ class Origin
     roll('30d6')
   end
 
-  def endurance
+  def health
     roll('30d6')
   end
 
@@ -36,7 +36,7 @@ class Origin
       Agility: agility,
       Willpower: willpower,
       Charisma: charisma,
-      Endurance: endurance
+      Health: health
     }
   end
 
