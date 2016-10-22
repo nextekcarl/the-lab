@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO:
+Add an Arena route. Each one will have 2 superbeings facing off and an environment.
 
-Things you may want to cover:
+People will vote for who they think will win. Maybe they can leave comments about why?
 
-* Ruby version
+After a set amount of time, the one with the most votes wins. Then they face someone
+new in a different arena. Rinse, repeat.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I'll need a Environment model (Arena?) of some sort. Something to associate 2 superbeings, and collect
+and tally votes.

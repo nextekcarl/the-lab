@@ -2,12 +2,24 @@ class Superbeing < ApplicationRecord
   attr_accessor :powers, :stats, :real_origin, :degrees, :weaknesses
 
   after_initialize do
-    self.origin = set_origin if origin.blank?
-    set_powers
-    set_stats
-    set_degrees
-    set_weaknesses
-    self.name = Faker::Superhero.name
+    if self.name.blank?
+      self.origin = set_origin if origin.blank?
+      set_powers
+      set_stats
+      set_degrees
+      set_weaknesses
+      self.name = Faker::Superhero.name
+    end
+  end
+
+  before_create do
+    self.description = @powers.map(&:to_s).join("\n")
+    self.weaknesses.each do |weakness|
+      self.description += "Weak vs: #{weakness}\n"
+    end
+    self.degrees.each do |degree|
+      self.description += "#{degree}\n"
+    end
   end
 
   private
