@@ -1,6 +1,14 @@
 class Superbeing < ApplicationRecord
   attr_accessor :powers, :stats, :real_origin, :degrees, :weaknesses
 
+  def victories
+    Arena.where("victor_id = ?", self.id)
+  end
+
+  def losses
+    Arena.where("victor_id != ? AND victor_id IS NOT NULL", self.id)
+  end
+
   after_initialize do
     if self.name.blank?
       self.origin = set_origin if origin.blank?
