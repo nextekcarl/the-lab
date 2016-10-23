@@ -11,7 +11,7 @@ class Arena < ApplicationRecord
   end
 
   def set_up(fighter1 = Superbeing.new)
-    self.fighter_1 = fighter1
+    self.fighter_1 = fighter1 || Superbeing.new
     self.fighter_2 = Superbeing.new
     self.location = Location.random_arena
     self

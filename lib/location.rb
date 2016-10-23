@@ -28,7 +28,7 @@ class Location
     'Ancient forest': 'if on fire, damage is 2x worse',
     'Active volcano': 'auto heat damage each minute unless immune to heat',
     'Alien Coliseum': 'aliens force you to fight, like flashier fights, decide winner',
-    'Downtown New York': 'lots of skyscrapers to fight around, zombie apocalypse 2x worse',
+    'Downtown New York': 'lots of skyscrapers to fight around, zombie apocalypse, if present, is 2x worse',
     'Tokyo': 'Kaiju are stronger here (2x worse)',
     'Moon Base Alpha': 'atmokinesis is weaker, meteor shower is 2x worse',
     'International space station': 'collateral damage is bad, unless immune to vaccuum',

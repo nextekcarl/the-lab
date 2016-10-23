@@ -1,0 +1,17 @@
+<h1>Battle: <%= @battle.id %></h1>
+<div class="row">
+  <div class="col-sm-4">
+    <%=render partial: 'shared/superhero.html', locals: {superbeing: @battle.fighter_1} %>
+  </div>
+  <div class="col-sm-1">
+    <h1>VS</h1>
+  </div>
+  <div class="col-sm-4">
+    <%= render partial: 'shared/superhero.html', locals: {superbeing: @battle.fighter_2} %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-9">
+  <strong>Battle Arena:</strong> <%= @battle.location %>
+  </div>
+</div>

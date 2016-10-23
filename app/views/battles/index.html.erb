@@ -1,0 +1,30 @@
+<h1>Hall of Battles!</h1>
+
+<table class="table table-bordered table-condensed table-striped table-hover">
+  <tr class="table-header">
+    <th>Battle #</th>
+    <th>Fighter 1</th>
+    <th>Fighter 2</th>
+    <th>Victor</th>
+    <th>Location</th>
+  </tr>
+  <% @battles.each do |battle| %>
+    <tr>
+      <td>
+        <%= link_to battle.id, battle_path(battle.id) %>
+      </td>
+      <td>
+        <%= battle.fighter_1.name %>
+      </td>
+      <td>
+        <%= battle.fighter_2.name %>
+      </td>
+      <td>
+        <%= battle.victor.try(:name) || "Undecided" %>
+      </td>
+      <td>
+        <%= truncate(battle.location, length: 25) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
