@@ -213,7 +213,31 @@
   subselect: [absorption, control]
   limitation_chance: 10
   description: This superbeing can either absorb radiation, using it to become stronger, or control radiation around themselves.
-# 36:
+37:
+  name: intuitive aptitude
+  categories: [mental]
+  description: This superbeing is considered skilled in using any object they can see or touch without training.
+38:
+  name: weapon mastery
+  categories: [skill]
+  limitations: [only melee, only ranged, only guns, only primative (pre-1500's style weapons)]
+  limitation_chance: 25
+  description: This superbeing has extraordinary skill in a variety of weapons.
+39:
+  name: nemesis
+  categories: [godlike]
+  limitations: [takes time to switch powers, limited duration, unreliable]
+  limitation_chance: 20
+  description: This superbeing can gain the ideal counter to an opponent's abilities, or a power that exploits their weaknesses.
+40:
+  name: psychic senses
+  categories: [mental]
+  subselect: [precognition, clairvoyance, postcognition, mind sense]
+  limitations: [no conscious control]
+  limitation_chance: 20
+  description: This superbeing
+
+# 40:
 #   name:
 #   categories: []
 #   subselect: []
