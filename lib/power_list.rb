@@ -23,25 +23,29 @@ class PowerList
     ]
   end
 
-  def self.random_select
+  def self.random_select(category = nil)
     power_details = ''
-    random_power = @@powers.keys.shuffle.first
+    if category.nil?
+      random_power = @@powers[@@powers.keys.shuffle.first]
+    else
+      random_power = @@categorized[category].shuffle.first
+    end
     description = ''
     #TODO: Figure out good way to build up final product.
     #Step through subselect options, limitations, etc.
-    power_details += "#{@@powers[random_power]['name']}"
-    unless @@powers[random_power]['subselect'].nil?
-      power_details += ", #{@@powers[random_power]['subselect'].shuffle.first}"
+    power_details += "#{random_power['name']}"
+    unless random_power['subselect'].nil?
+      power_details += ", #{random_power['subselect'].shuffle.first}"
     end
     while roll('1d100') < 10
       power_details += " (#{@@universal_modifiers.shuffle.first})"
     end
-    unless @@powers[random_power]['limitations'].nil?
-      if roll('1d100') < @@powers[random_power]['limitation_chance']
-        limitation = "#{@@powers[random_power]['limitations'].shuffle.first}"
+    unless random_power['limitations'].nil?
+      if roll('1d100') < random_power['limitation_chance']
+        limitation = "#{random_power['limitations'].shuffle.first}"
       end
     end
-    description = @@powers[random_power]['description']
+    description = random_power['description']
     return power_details, limitation, description
   end
 

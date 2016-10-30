@@ -39,12 +39,34 @@ class Mutant < Origin
   end
 
   def base_powers
-    return 4 if @omega
     3
   end
 
   def add_powers
     1
+  end
+
+  def set_powers
+    powers = super
+    if @omega
+      name, limitation, description = PowerList.random_select('godlike')
+      extra_power = Power.new({name: name,
+                       strength: "#{power_strength}",
+                       limitation: limitation,
+                       description: description
+                       })
+      powers << extra_power
+    end
+    return powers
+  end
+
+  def random_power
+    name, limitation, description = PowerList.random_select
+    return Power.new({name: name,
+                     strength: "#{power_strength}",
+                     limitation: limitation,
+                     description: description
+                     })
   end
 
   def weakness_chance
