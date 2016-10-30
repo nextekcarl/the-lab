@@ -32,7 +32,7 @@ class Superbeing < ApplicationRecord
       self.description += "POWER: #{power.to_db}\n"
     end
     self.weaknesses.each do |weakness|
-      self.description += "WEAKNESS: #{weakness}\n"
+      self.description += "WEAKNESS: #{weakness.to_db}\n"
     end
     self.degrees.each do |degree|
       self.description += "DEGREE: #{degree}\n"
@@ -73,7 +73,7 @@ class Superbeing < ApplicationRecord
       elsif power = line.match(/^POWER:\s(.+)$/)
         @powers << Power.from_db(JSON.parse(power[1]))
       elsif weakness = line.match(/^WEAKNESS:\s(\w+)$/)
-        @weaknesses << weakness[1]
+        @weaknesses << Weakness.from_db(JSON.parse(weakness[1]))
       elsif degree = line.match(/^DEGREE:\s(.+)$/)
         @degrees << degree[1]
       end

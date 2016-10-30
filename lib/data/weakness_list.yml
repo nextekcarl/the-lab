@@ -1,0 +1,34 @@
+1:
+  name: power loss
+  categories: [physical, mental]
+  subselect: [fire, extreme cold, rare mineral, gold, silver, diamond, electricity]
+  description: This Superbeing's powers are lost when closely exposed to the given substance or energy. Their powers cannot affect the given stimulus, either.
+2:
+  name: vulnerability
+  categories: [physical]
+  subselect: [fire, extreme cold, rare mineral, gold, silver, diamond, electricity, magic, radiation, sonics]
+  description: This Superbeing is vulnerable to harm from a certain subject, and defensive powers fail vs the weakness.
+3:
+  name: vulnerability
+  categories: [physical]
+  subselect: [fire, extreme cold, rare mineral, gold, silver, diamond, electricity, magic, radiation, sonics]
+  description: This Superbeing is vulnerable to harm from a certain subject, and defensive powers fail vs the weakness.
+4:
+  name: vice
+  categories: [mental]
+  subselect: [greed, lust, wrath, pride, sloth, envy, gluttony]
+  description: This Superbeing's desires are driven by an overwhelming vice.
+5:
+  name: requirement
+  categories: [physical]
+  subselect: [gold, silver, diamond, electricity, solar energy, radiation, antibiotics]
+  description: This Superbeing requires access to something to maintain their powers or life.
+6:
+  name: overload
+  categories: [physical]
+  description: Using their powers too much, too frequently, or at too high of a level leads to a harmful overload for this Superbeing.
+7:
+  name: mental
+  categories: [mental]
+  subselect: [PTSD, self-doubt, fear, ]
+  description: This Superbeing's past provides a weakness that can be exploited.

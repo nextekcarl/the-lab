@@ -30,7 +30,7 @@
     <strong>Weaknesses:</strong>
     <ul>
       <% superbeing.weaknesses.each do |weakness| %>
-        <li>Weak vs: <%= weakness %></li>
+        <li><%= weakness.to_s.titleize %> <%= button_to 'description', '#', class: 'btn btn-secondary x-noop', 'data-toggle': 'tooltip', 'data-placement': "top", 'title': weakness.description %></li>
       <% end %>
     </ul>
   <% end %>

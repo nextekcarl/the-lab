@@ -88,7 +88,10 @@ class Origin
   def set_weaknesses
     weaknesses = []
     while weakness_chance >= Random.new.rand(100) do
-      weaknesses << Faker::Superhero.power
+      name, description = WeaknessList.random_select
+      weaknesses << Weakness.new({name: name,
+                       description: description
+                       })
     end
     return weaknesses
   end
