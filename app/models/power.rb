@@ -2,6 +2,7 @@ class Power
   attr_accessor :name, :strength, :limitation, :description
 
   def initialize(args)
+    args = HashWithIndifferentAccess.new(args)
     @name = args[:name]
     @strength = args[:strength]
     @limitation = args[:limitation]
@@ -16,7 +17,15 @@ class Power
     end
   end
 
+  def to_db
+    self.to_json
+  end
+
   def ==(o)
     o.class == self.class && o.name == self.name
+  end
+
+  def self.from_db(json)
+    Power.new(json)
   end
 end
