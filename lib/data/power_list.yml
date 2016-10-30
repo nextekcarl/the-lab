@@ -14,7 +14,7 @@
   name: elemental control
   categories: [elemental]
   subselect: [fire, stone, water, metal, wood, air]
-  description: This superbeing can control an element.
+  description: This superbeing can create and control an element, unless limited.
   limitations: [control existing only]
   limitation_chance: 30
 4:
