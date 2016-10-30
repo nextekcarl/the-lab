@@ -73,8 +73,12 @@ class Origin
   end
 
   def random_power
-    return Power.new({name: "#{possible_immunity}#{Faker::Superhero.power}",
-                     strength: "#{power_strength}"})
+    name, limitation, description = PowerList.random_select
+    return Power.new({name: name,
+                     strength: "#{power_strength}",
+                     limitation: limitation,
+                     description: description
+                     })
   end
 
   def possible_immunity

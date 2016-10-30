@@ -1,0 +1,222 @@
+1:
+  name: super stat
+  categories: [simple]
+  subselect: [Strength, IQ, Agility, Willpower, Charisma, Health]
+  description: One of this superbeing's attributes are enhanced to superhuman levels.
+  limitations: [affects others only, limited duration, specific emotion required, specific emotion prohibited]
+  limitation_chance: 30
+2:
+  name: elemental transformation
+  categories: [elemental]
+  subselect: [fire, stone, water, metal, wood, air, ice]
+  description: This superbeing can transform themselves into an elemental form.
+3:
+  name: elemental control
+  categories: [elemental]
+  subselect: [fire, stone, water, metal, wood, air]
+  description: This superbeing can control an element.
+  limitations: [control existing only]
+  limitation_chance: 30
+4:
+  name: projection
+  categories: [ranged]
+  subselect: [force, light, cold, fire]
+  description: This superbeing can project some energy, object, or force some distance.
+5:
+  name: invisibility
+  categories: [illusion]
+  limitations: [fringe effect, mind effecting]
+  limitation_chance: 20
+  description: This superbeing can turn themselves undetectable to vision.
+6:
+  name: reality warping
+  categories: [godlike]
+  limitations: [affects others only, limited duration, unpredictable side effects]
+  limitation_chance: 40
+  description: This superbeing can alter reality itself within a limited area.
+7:
+  name: enhanced senses
+  categories: [simple, senses]
+  subselect: [sight, smell, hearing, touch, all normal, spatial awareness, danger]
+  limitations: [always on, overload sensitive]
+  limitation_chance: 10
+  description: This superbeing has one or more senses that can operate at heightened levels.
+8:
+  name: omnipotence
+  categories: [godlike]
+  description: This superbeing can manipulate other's powers, increasing, reducing, even adding new ones.
+9:
+  name: teleportation
+  categories: [movement]
+  subselect: [portal creation, blinking, blinking, blinking]
+  limitations: [self only, concentration, gestures, line of sight only]
+  limitation_chance: 10
+  description: This superbeing can instantly move from one place to another without crossing the distance between.
+10:
+  name: regeneration
+  categories: [healing, physical, defensive]
+  limitations: [imperfect recovery, can't regenerate limbs]
+  limitation_chance: 10
+  description: This superbeing can recover from damage faster than normal.
+11:
+  name: immortality
+  categories: [godlike, healing, physical, defensive]
+  limitations: [power negated by uncommon substance, power negated by uncommon situation, slow recovery]
+  limitation_chance: 40
+  description: This superbeing can recover from death itself.
+12:
+  name: invulnerability
+  categories: [godlike, physical]
+  subselect: [energy, physical, magic, mental]
+  description: This superbeing is immune to specific types of effects.
+13:
+  name: armor
+  categories: [physical, defensive]
+  subselect: [natural, artificial, energy]
+  limitations: [reduces mobility]
+  limitation_chance: 10
+  description: This superbeing has armor that makes them resistant to physical harm.
+14:
+  name: flight
+  categories: [movement]
+  limitations: [requires concentration, tiring, gliding only, levitation only]
+  limitation_chance: 10
+  description: This superbeing can fly through the air or space.
+15:
+  name: force fields
+  categories: [force, defensive]
+  limitations: [walls only, opaque, feedback, requires concentration]
+  limitation_chance: 15
+  description: This superbeing can create walls of pure force.
+16:
+  name: intangibility
+  categories: [defensive]
+  limitations: [limited duration]
+  limitation_chance: 10
+  description: This superbeing can become immune to physical effects, but can't affect the world physically, either.
+17:
+  name: kinesis
+  categories: [mental]
+  subselect: [magneto, tele, bio, chloro, umbra]
+  limitations: [requires gestures, requires touch, physically tiring]
+  limitation_chance: 15
+  description: This superbeing can mentally manipulate things using only their mind.
+18:
+  name: superspeed
+  categories: [physical]
+  limitations: [snap back to start location each heartbeat]
+  limitation_chance: 5
+  description: This superbeing can move much faster than the eye can see.
+19:
+  name: special vision
+  categories: [senses]
+  subselect: [infrared, microscopic, telescopic, night, x-ray]
+  description: This superbeing has exceptional visual abilities.
+20:
+  name: photographic reflexes
+  categories: [simple]
+  limitations: [limited duration retention]
+  limitation_chance: 10
+  description: This superbeing can replicate any physical action they've seen performed.
+21:
+  name: molecular
+  categories: [ranged]
+  subselect: [dissipation, manipulation, immobilization]
+  description: This superbeing can directly affect matter at a quantum level.
+22:
+  name: physical anomaly
+  categories: [physical]
+  subselect: [extra arms, tentacles, extra head, flexible bones, extra mouth, natural weapons]
+  description: This superbeing has some physical difference that makes them unusual.
+23:
+  name: power
+  categories: [ranged]
+  subselect: [cosmic, absorption, nullifier, sense, augmentation]
+  description: This superbeing can manipulate powers themselves, or use fundamental powers of creation.
+24:
+  name: illusions
+  categories: [illusion]
+  subselect: [physical, mental]
+  limitations: [sight only, sound only]
+  limitation_chance: 20
+  description: This superbeing can create illusions that are difficult to differiate from the real thing. Most can affect sight and sound but not touch.
+25:
+  name: mental manipulation
+  categories: [mental]
+  subselect: [insanity, control, communication, blast]
+  limitations: []
+  limitation_chance: 10
+  description: This superbeing can affect the minds of others at a distance.
+26:
+  name: shapeshifting
+  categories: [physical]
+  limitations: [animal shapes only, mimicry only, same mass only]
+  limitation_chance: 10
+  description: This superbeing can change their physical shape, changing their size and composition.
+27:
+  name: size changing
+  categories: [physical]
+  subselect: [growth, shrinking, omni]
+  limitations: [mass doesn't change]
+  limitation_chance: 20
+  description: This superbeing can change their size, growing or shrinking (or both with omni) at will.
+28:
+  name: death touch
+  categories: [godlike]
+  description: This superbeing can simply overwhelm the lifeforce of any living being with a close touch (armor won't stop it).
+29:
+  name: energy
+  categories: [energy, ranged]
+  subselect: [constructs, absorption, manipulation, resistance]
+  limitations: [electricity only, fire only, force only, cold only, darkforce only]
+  limitation_chance: 20
+  description: This superbeing can control, manipulate, absorb (increasing all their other powers), or are simply very resistance to energy.
+30:
+  name: adaptation
+  categories: [physical]
+  limitations: [takes time, requires conscious control]
+  limitation_chance: 10
+  description: This superbeing can physically adapt to adverse physical environments
+31:
+  name: ability shift
+  categories: [simple]
+  limitations: [mental to physical only, physical to mental only]
+  limitation_chance: 30
+  description: This superbeing can increase one ability at the expense of another.
+32:
+  name: density control
+  categories: [physical]
+  limitations: [increase only, decrease only]
+  limitation_chance: 10
+  description: This superbeing manipulate their own density.
+33:
+  name: duplication
+  categories: [physical]
+  limitations: [duplicates are illusionary, duplicates all take damage when one does]
+  limitation_chance: 25
+  description: This superbeing can create perfect copies of themselves, minus the ability to duplicate themselves.
+34:
+  name: resistance
+  categories: [defensive]
+  subselect: [heat, mental, magic, toxin and disease, cold]
+  description: This superbeing is more resistant to harm.
+35:
+  name: time control
+  categories: [godlike]
+  subselect: [self only, others only, omni]
+  limitations: [travel only, dilation only, contraction only]
+  limitation_chance: 30
+  description: This superbeing can manipulate time itself in some way.
+36:
+  name: radiation
+  categories: [energy, ranged]
+  subselect: [absorption, control]
+  limitation_chance: 10
+  description: This superbeing can either absorb radiation, using it to become stronger, or control radiation around themselves.
+# 36:
+#   name:
+#   categories: []
+#   subselect: []
+#   limitations: []
+#   limitation_chance: 10
+#   description: This superbeing
