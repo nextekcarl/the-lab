@@ -14,7 +14,7 @@
     <strong>Powers:</strong>
     <ul>
       <% superbeing.powers.each do |power| %>
-        <li><%= power.to_s.titleize %> <%= link_to 'description', '#', 'data-toggle': 'tooltip', 'title': power.description %></li>
+        <li><%= power.to_s.titleize %> <%= button_to 'description', '#', class: 'btn btn-secondary x-noop', 'data-toggle': 'tooltip', 'data-placement': "bottom", 'title': power.description %></li>
       <% end %>
     </ul>
   <% end %>
