@@ -121,7 +121,7 @@
 21:
   name: molecular
   categories: [ranged]
-  subselect: [dissipation, manipulation, immobilization]
+  subselect: [dissipation, manipulation, immobilization, creation]
   description: This superbeing can directly affect matter at a quantum level.
 22:
   name: physical anomaly
