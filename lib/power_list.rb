@@ -26,7 +26,15 @@ class PowerList
   def self.random_select(category = nil)
     power_details = ''
     if category.nil?
-      random_power = @@powers[@@powers.keys.shuffle.first]
+      good_power = false
+      until good_power
+        random_power = @@powers[@@powers.keys.shuffle.first]
+        if random_power['categories'].include?('godlike')
+          good_power = true if roll('1d100') <= 25
+        else
+          good_power = true
+        end
+      end
     else
       random_power = @@categorized[category].shuffle.first
     end
