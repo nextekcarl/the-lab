@@ -150,7 +150,7 @@
 26:
   name: shapeshifting
   categories: [physical]
-  limitations: [animal shapes only, mimicry only, same mass only]
+  limitations: [animal shapes only, mimicry only, same mass only, elasticity only ]
   limitation_chance: 10
   description: This superbeing can change their physical shape, changing their size and composition.
 27:
@@ -235,7 +235,13 @@
   subselect: [precognition, clairvoyance, postcognition, mind sense]
   limitations: [no conscious control]
   limitation_chance: 20
-  description: This superbeing
+  description: This superbeing has some extraordinary senses.
+41:
+  name: exceptional skill
+  categories: [skills]
+  subselect: [invention, martial arts, tactics, superscience, stealth, hacking, survival, medicine, acrobatics, tracking]
+  description: This superbeing has some extraordinary talent or experience with these skills, and is able to use them at superhuman levels.
+  ignore_universal_modifiers: true
 
 # 40:
 #   name:

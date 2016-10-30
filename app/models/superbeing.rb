@@ -43,7 +43,7 @@ class Superbeing < ApplicationRecord
 
   def set_origin
     #TODO: Rework Skilled to use new power system
-    @real_origin = [Mutant.new, Curse.new, Accident.new, Experiment.new, Robot.new, Magic.new, Alien.new].shuffle.first
+    @real_origin = [Mutant.new, Curse.new, Accident.new, Experiment.new, Robot.new, Magic.new, Alien.new, Skilled.new].shuffle.first
   end
 
   def set_powers

@@ -35,6 +35,10 @@ class Skilled < Origin
     0
   end
 
+  def power_strength
+    roll('40d4') + 20
+  end
+
   def degree_calculation(intelligence)
     (intelligence-40)/20
   end
@@ -44,7 +48,12 @@ class Skilled < Origin
     number_of_skills = Random.new.rand(base_skills)+add_skills
     skill_count = 0
     while skill_count < number_of_skills do
-      skill = RandomSkills.new
+      name, limitation, description = PowerList.random_select('skills')
+      skill = Power.new({name: name,
+                         strength: "#{power_strength}",
+                         limitation: limitation,
+                         description: description
+                       })
       if skills.include? skill
         next #No duplicate skills
       else
@@ -54,5 +63,4 @@ class Skilled < Origin
     end
     return skills
   end
-
 end
