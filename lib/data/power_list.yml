@@ -120,7 +120,7 @@
   description: This superbeing can replicate any physical action they've seen performed.
 21:
   name: molecular
-  categories: [ranged]
+  categories: [ranged, godlike]
   subselect: [dissipation, manipulation, immobilization, creation]
   description: This superbeing can directly affect matter at a quantum level.
 22:
@@ -130,7 +130,7 @@
   description: This superbeing has some physical difference that makes them unusual.
 23:
   name: power
-  categories: [ranged]
+  categories: [ranged, godlike]
   subselect: [cosmic, absorption, nullifier, sense, augmentation]
   description: This superbeing can manipulate powers themselves, or use fundamental powers of creation.
 24:
