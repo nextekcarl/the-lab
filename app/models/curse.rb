@@ -39,4 +39,15 @@ class Curse < Origin
     20
   end
 
+  def set_weaknesses
+    weaknesses = super
+    if weaknesses.empty? #Curse has one required weakness
+      name, description = WeaknessList.random_select
+      weaknesses << Weakness.new({name: name,
+                                  description: description
+                                })
+    end
+    return weaknesses
+  end
+
 end
