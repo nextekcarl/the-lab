@@ -45,7 +45,7 @@ class PowerList
     unless random_power['subselect'].nil?
       power_details += ", #{random_power['subselect'].shuffle.first}"
     end
-    while roll('1d100') <= 10 && !!random_power['ignore_universal_modifiers']
+    while roll('1d100') <= 10 && !random_power['ignore_universal_modifiers']
       power_details += " (#{@@universal_modifiers.shuffle.first})"
     end
     unless random_power['limitations'].nil?
