@@ -30,5 +30,14 @@
 7:
   name: mental
   categories: [mental]
-  subselect: [PTSD, self-doubt, fear, ]
+  subselect: [PTSD, self-doubt, fear]
   description: This Superbeing's past provides a weakness that can be exploited.
+8:
+  name: quirk
+  categories: [power]
+  subselect: [full power only, slow activation, no fine control, feedback damage, power activates itself]
+  description: This Superbeing's first power listed has some quirk that makes it work oddly. It isn't always an entirely bad effect, though.
+9:
+  name: unreliable
+  categories: [power]
+  description: This Superbeing's highest rated power (powers in case of tie) doesn't always work. The higher the power rating, the less likely it to to work at full strength.
