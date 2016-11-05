@@ -117,4 +117,10 @@ class Origin
     @degrees = ["No advanced degrees of note"] if @degrees.empty?
     return @degrees
   end
+
+  def set_name
+    titles = ['sir', 'doctor', 'mister', 'mrs', 'miss', 'dr', 'captain', 'sergeant', 'commander', 'master', 'lord', 'major', 'dame', 'grim', 'general', 'gate']
+    names = ['inferno', 'storm', 'doom', 'power', 'universe', 'sinister', 'artic', 'demon', 'america', 'forest', 'reaper', 'forever', 'avalanche', 'fate', 'mayhem', 'slaughter', 'keeper']
+    return "#{titles.shuffle.first} #{names.shuffle.first}"
+  end
 end

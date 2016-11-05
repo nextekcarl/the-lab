@@ -16,7 +16,7 @@ class Superbeing < ApplicationRecord
       set_stats
       set_degrees
       set_weaknesses
-      self.name = Faker::Superhero.name
+      self.name = set_name
     else
       #parse description to get stats, degrees, and weaknesses
       parse_description
@@ -44,6 +44,10 @@ class Superbeing < ApplicationRecord
   def set_origin
     #TODO: Rework Skilled to use new power system
     @real_origin = [Mutant.new, Curse.new, Accident.new, Experiment.new, Robot.new, Magic.new, Alien.new, Skilled.new].shuffle.first
+  end
+
+  def set_name
+    @name ||= self.real_origin.set_name.titleize
   end
 
   def set_powers
