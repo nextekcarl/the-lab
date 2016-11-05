@@ -41,3 +41,7 @@
   name: unreliable
   categories: [power]
   description: This Superbeing's highest rated power (powers in case of tie) doesn't always work. The higher the power rating, the less likely it to to work at full strength.
+10:
+  name: transformation
+  categories: [power]
+  description: This Superbeing's powers are only available in a transformed state. They are normal human power level the rest of the time, if not actually human (in the case of aliens), which might actually improve some of their stats in some cases.
