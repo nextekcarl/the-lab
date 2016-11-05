@@ -119,8 +119,8 @@ class Origin
   end
 
   def set_name
-    titles = ['sir', 'doctor', 'mister', 'mrs', 'miss', 'dr', 'captain', 'sergeant', 'commander', 'master', 'lord', 'major', 'dame', 'grim', 'general', 'gate']
-    names = ['inferno', 'storm', 'doom', 'power', 'universe', 'sinister', 'artic', 'demon', 'america', 'forest', 'reaper', 'forever', 'avalanche', 'fate', 'mayhem', 'slaughter', 'keeper']
+    titles = ['sir', 'doctor', 'mister', 'mrs', 'miss', 'dr', 'captain', 'sergeant', 'commander', 'master', 'lord', 'major', 'dame', 'grim', 'general', 'gate', 'white', 'black', 'green', 'red', 'spirit']
+    names = ['inferno', 'storm', 'doom', 'power', 'universe', 'sinister', 'artic', 'demon', 'america', 'forest', 'reaper', 'forever', 'avalanche', 'fate', 'mayhem', 'slaughter', 'keeper', 'skull', 'daemon']
     return "#{titles.shuffle.first} #{names.shuffle.first}"
   end
 end
